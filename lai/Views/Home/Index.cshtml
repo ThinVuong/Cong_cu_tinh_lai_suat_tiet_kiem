@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="d-flex flex-column">
+    <h1 class="text-center my-5 text-uppercase"><strong> Công cụ tính lãi suất </strong></h1>
+    <div class="d-flex flex-column justify-content-between gap-3">
+        <div class="col-4 mx-auto">
+            <form action="/Home/Index" method="post">
+                <div class="mb-3">
+                    <label for="soTienGui" class="form-label">Số tiền gửi</label>
+                    <input type="text" class="form-control" id="soTienGui" name="soTienGui" value="@ViewData["So_tien_gui"]" aria-describedby="text">
+                </div>
+                <div class="mb-3">
+                    <label for="laiSuatGui" class="form-label">Lãi suất gửi</label>
+                    <input type="number" class="form-control" id="laiSuatGui" name="laiSuatGui" value="@ViewData["Lai_suat_gui"]" aria-describedby="text">
+                </div>
+                <div class="mb-3">
+                    <label for="kyHanGui" class="form-label">Kỳ hạn gủi</label>
+                    <input type="number" class="form-control" id="kyHanGui" name="kyHanGui" value="@ViewData["Ky_han_gui"]" aria-describedby="text">
+                </div>
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                    <button type="submit" id="ketqua" class="btn btn-primary px-4 py-2">Xem kết quả</button>
+                </div>
+            </form>
+        </div>
+        <div class="mb-5 col-4 mx-auto">
+            <label for="tienLai" class="form-label fw-bold">Số tiền lãi nhận được</label>
+            <input type="number" class="form-control" id="tienLai" name="tienLai" value="@ViewData["Tien_lai"]" aria-describedby="text">
+        </div>
+        <div class="mb-5 col-4 mx-auto">
+            <label for="tongTien" class="form-label fw-bold">Tổng so tiền nhận được khi đến kỳ hạn</label>
+            <input type="text" class="form-control" id="tongTien" name="tongTien" value="@ViewData["Tong_tien"]" aria-describedby="text">
+        </div>
+        <div class="mb-5 col-4 mx-auto">
+            <label for="thongBao" class="form-label fw-bold">Thông báo</label>
+            <input type="text" class="form-control" id="thongBao" name="thongBao" value="@ViewData["ThongBao"]" aria-describedby="text">
+        </div>
+    </div>
+</div>
+
